@@ -149,7 +149,31 @@ function Fibonacci(number, first = 0, last = 1, string = '0') {
     }
 }
 
-Fibonacci(10)
+// Fibonacci(10)
+
+function FibonacciV2(number) {
+    const tab = []
+
+    for (let i = 0; i <= number; i++) {
+        if (tab.length === 0) {
+            tab.push(0)
+        }
+
+        else if (tab.length === 1) {
+            tab.push(1)
+        }
+
+        else {
+            tab.push(tab[tab.length - 1] + tab[tab.length - 2])
+        }
+    }
+
+    console.log(tab.join(' '));
+}
+
+
+FibonacciV2(10)
+
 
 function sommeOfNumber(number) {
     let result = 0
