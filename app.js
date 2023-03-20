@@ -125,7 +125,7 @@ function Positif(numbers) {
 // console.log(Positif([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -1, -2, 3, -4, -5, -55, 0]));
 
 function Max(numbers) {
-    // return Math.max(numbers)  on peut utiliser cela la consigne ne dit pas de pas l'utiliser !
+    // return Math.max(...numbers)  on peut utiliser cela la consigne ne dit pas de pas l'utiliser !
     let result = numbers[0]
 
     for (let i = 0; i < numbers.length; i++) {
@@ -137,19 +137,19 @@ function Max(numbers) {
 
 // console.log(Max([-1, -2, -3, 5]));
 
-function Fibonacci(number, first = 0, last = 1, string = '') {
-    const New = first + last
-    string += `${New} `
+function Fibonacci(number, first = 0, last = 1, string = '0') {
 
     if (number === 0) {
         console.log(string)
     }
     else {
+        const New = first + last
+        string += ` ${New}`
         Fibonacci(number - 1, last, New, string)
     }
 }
 
-// Fibonacci(10)
+Fibonacci(10)
 
 function sommeOfNumber(number) {
     let result = 0
@@ -201,4 +201,4 @@ function moyenneOfString(text) {
     return result / spliter.length
 }
 
-console.log(moyenneOfString('1,2,3,4,5,6,7,8,9,10'));
+// console.log(moyenneOfString('1,2,3,4,5,6,7,8,9,10'));
